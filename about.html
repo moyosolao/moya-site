@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="about">
+    <header class="blog-header">
+        <a href="home.html">
+            <img src="images/moyalogo.png" alt="Logo" class="rolling-logo" />
+          </a>
+                
+      <!-- Replace blog title/subtitle with nav links -->
+      <nav class="page-nav">
+        <a href="about.html" class="active">About</a>
+        <a href="engineer.html">Engineer</a>
+        <a href="art.html">Art</a>
+        <a href="model.html">Model</a>
+        <a href="styling.html">Styling</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+    </header>
+  
+    <section class="about-me-wrapper">
+        <div class="about-left">
+          <img src="images/paintborderpic.png" alt="A photo of me" />
+        </div>
+        <div class="about-right">
+          <h1>Heyyy!</h1>
+          <p>
+            I’m Moya, and this is my blog/personal website ◡̈ *Virtual Hug* <br><br>
+
+            I coded this space to showcase my work across all facets of my life-both the creative and the technical. I’ve always had a love for creation and found watching an idea unfold step by step into something real and new really really beautiful. I love to understand-not just in the classroom but everywhere. I’m always picking up new skills, exploring new corners of curiosity, and collecting passions like they’re Pokémon. I even like to coin myself a Renaissance WOman. 
+            This appreciation for design and storytelling has lead me to study Software Engineering and Visual Arts & Technology, while also pursuing fashion modeling and styling. That said, when it comes to my personal pursuits, I like to keep that list ever-growing. I love the phrase “The world is your oyster”- though to be honest I never really eat them. But metaphorically? I’m slurping up every opportunity I can find. <br><br>
+
+            I hope these parts of me I share gives you a window into the way I see, build, and play with the world around me. Thx for being here ◡̈ <br><br>
+            Xx, Moya    
+          </p>
+        </div>
+      </section>
+      
+      <section class="fun-fact-section">
+    
+          <h2>Fun Facts About Me!</h2>
+          <button id="fact-button">Click me!</button>
+          <p id="fun-fact-display">#getexcited</p>
+        
+      </section>
+      
+      
+      <script>
+        const facts = [
+          "I’ve worn a hoodie in 90-degree weather just for the aesthetic.",
+          "I once accidentally coded an infinite loop and crashed my laptop.",
+          "I have a playlist called 'walking like the main character'.",
+          "I designed a whole page once just to match my favorite snack colors.",
+          "I love oatmilk lattes more than I love most apps.",
+          "I've said 'slay' unironically during a presentation before."
+        ];
+      
+        const factDisplay = document.getElementById("fun-fact-display");
+        const button = document.getElementById("fact-button");
+      
+        button.addEventListener("click", () => {
+          const randomIndex = Math.floor(Math.random() * facts.length);
+          factDisplay.textContent = facts[randomIndex];
+        });
+      </script>
+      
+      
+      
+</body>
