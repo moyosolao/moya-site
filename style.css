@@ -335,10 +335,19 @@
   }
   
 /* PDF Preview */
- .report-preview {
+/* "View Report" link style */
+.toggle-report {
+    cursor: pointer;
+    text-decoration: underline;
+    margin-left: 1rem;
+    color: #0077cc;
+    font-weight: 500;
+  }
+  
+  /* PDF Preview */
+  .report-preview {
     display: none;
     margin-top: 1rem;
-    position: relative;
     border: 2px solid #24b2f9;
     border-radius: 12px;
     overflow: hidden;
@@ -347,18 +356,9 @@
   
   .pdf-viewer {
     width: 100%;
-    height: 400px; /* adjust as needed */
+    height: 600px; /* bigger preview */
     border: none;
   }
   
-  .close-report {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background: #fff;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
   
 

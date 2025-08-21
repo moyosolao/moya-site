@@ -65,31 +65,25 @@
               </p>
                 
               <div class="project-links">
-                <button class = "toggle-report"> View Report </button>
+                <span class = "toggle-report"> View Report </span>
                 </div>
 
                 <div class="report-preview">
-                    <button class="close-report">✖</button>
                     <embed src="reports/Final Documentation_Office.pdf" type="application/pdf" class="pdf-viewer"/>
-
 
                 </div>        
             </div>
           </div>
       
       </section>
-      
-      <script>
-        document.querySelectorAll('.toggle-report').forEach((button, index) => {
-          button.addEventListener('click', () => {
-            const preview = button.closest('.project-feature').querySelector('.report-preview');
-            preview.style.display = 'block';
-          });
-        });
-        document.querySelectorAll('.close-report').forEach(button => {
-          button.addEventListener('click', () => {
-            button.parentElement.style.display = 'none';
+    
+<script>
+        document.querySelectorAll('.toggle-report').forEach(link => {
+          link.addEventListener('click', () => {
+            const preview = link.closest('.project-feature').querySelector('.report-preview');
+            preview.style.display = (preview.style.display === 'block') ? 'none' : 'block';
           });
         });
       </script>
+      
       
