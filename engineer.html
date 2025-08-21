@@ -28,14 +28,14 @@
     <section class="projects-section">
         <h1 class="section-title">Engineering Projects</h1>
         <p class="section-subtitle">
-            Here's a peek into some technical projects I've built and collaborated on throughout my time studying Software Engineering!
+            Here's a peek into some technical projects I've built and collaborated on throughout my time studying Software Engineering.
         </p>
       
         <!-- Project 1 -->
         <div class="project-feature">
           <img src="images/safewaterlogo.png" alt="Project 1 Preview" class="project-feature-img" />
           <div class="project-feature-text">
-            <h2 class="project-title">Toilet Water Quality Monitor</h2>
+            <h2 class="project-title">Safe Water Monitor</h2>
             <p class="project-desc">
               A real-time sensor system that tests water quality using Arduino and displays data via a custom web dashboard.
             </p>
@@ -47,14 +47,49 @@
         <div class="project-feature">
           <img src="images/project2-preview.png" alt="Project 2 Preview" class="project-feature-img" />
           <div class="project-feature-text">
-            <h2 class="project-title">Embargoed News Platform</h2>
+            <h2 class="project-title">Press Protect</h2>
             <p class="project-desc">
               A secure web platform for journalists and brands to manage, share, and schedule time-sensitive news releases.
             </p>
             <a href="https://github.com/your-username/news-platform" class="project-link" target="_blank">View on GitHub</a>
           </div>
         </div>
+
+         <!-- Project 3 -->
+         <div class="project-feature">
+            <img src="images/project2-preview.png" alt="Project 3 Preview" class="project-feature-img" />
+            <div class="project-feature-text">
+              <h2 class="project-title">Office Environment Monitoring System</h2>
+              <p class="project-desc">
+                A self-contained system that monitors the temperature, humidity and light intensity in an office. 
+              </p>
+                
+              <div class="project-links">
+                <button class = "toggle-report"> View Report </button>
+                </div>
+
+                <div class="report-preview">
+                    <button class="close-report">✖</button>
+                    <embed src="reports/Final Documentation_Office.pdf" type="application/pdf" class="pdf-viewer"/>
+
+
+                </div>        
+            </div>
+          </div>
       
       </section>
       
+      <script>
+        document.querySelectorAll('.toggle-report').forEach((button, index) => {
+          button.addEventListener('click', () => {
+            const preview = button.closest('.project-feature').querySelector('.report-preview');
+            preview.style.display = 'block';
+          });
+        });
+        document.querySelectorAll('.close-report').forEach(button => {
+          button.addEventListener('click', () => {
+            button.parentElement.style.display = 'none';
+          });
+        });
+      </script>
       
