@@ -383,18 +383,20 @@
   }
   
   .project-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 300px;
+    display: flex;
     gap: 15px;
-    margin: 2rem 0;
+    overflow-x: auto;   /* enables horizontal scroll */
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory; /* nice snapping */
   }
   
   .project-gallery img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    flex: 0 0 auto;       /* prevents images from shrinking */
+    width: 300px;         /* adjust size here */
+    height: auto;
     border-radius: 12px;
+    object-fit: cover;
+    scroll-snap-align: start;
     transition: transform 0.3s ease;
   }
   
