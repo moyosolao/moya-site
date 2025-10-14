@@ -441,25 +441,52 @@ body, h1, h2, h3, h4, h5, h6, p, a {
   }
 }
 
-.carousel {
+/* --- MULTI-IMAGE CAROUSEL --- */
+.carousel-multi {
   width: 100%;
-  max-height: 80vh; /* responsive height limit */
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
-  background-color: #000; /* optional backdrop */
+  white-space: nowrap;
   margin-bottom: 40px;
+  background-color: #000; /* optional backdrop for consistency */
+  padding: 20px 0;
 }
 
-.carousel img {
-  width: auto;
-  height: 80vh; /* keeps proportions consistent */
-  object-fit: contain; /* shows the full photo */
-  object-position: center;
-  transition: opacity 0.5s ease-in-out;
-  border-radius: 10px; /* optional aesthetic touch */
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  animation: scroll 40s linear infinite;
 }
+
+.carousel-track img {
+  height: 300px; /* adjust for your layout */
+  width: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.05);
+}
+
+/* Continuous scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .carousel-track img {
+    height: 200px;
+  }
+}
+
 
 
 
