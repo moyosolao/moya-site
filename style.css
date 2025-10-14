@@ -445,24 +445,23 @@ body, h1, h2, h3, h4, h5, h6, p, a {
 .carousel-multi {
   width: 100%;
   overflow: hidden;
-  white-space: nowrap;
   margin-bottom: 40px;
-  background-color: #000; /* optional backdrop for consistency */
-  padding: 20px 0;
+  background: none; /* removes black background */
 }
 
 .carousel-track {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 20px;
   animation: scroll 40s linear infinite;
 }
 
 .carousel-track img {
-  height: 300px; /* adjust for your layout */
+  height: 250px; /* adjust to your liking */
   width: auto;
-  object-fit: contain;
-  border-radius: 10px;
   flex-shrink: 0;
+  object-fit: cover; /* keeps a clean look */
+  border-radius: 10px;
   transition: transform 0.3s ease;
 }
 
@@ -470,7 +469,7 @@ body, h1, h2, h3, h4, h5, h6, p, a {
   transform: scale(1.05);
 }
 
-/* Continuous scroll animation */
+/* Smooth infinite scroll effect */
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -483,9 +482,10 @@ body, h1, h2, h3, h4, h5, h6, p, a {
 /* Responsive tweak */
 @media (max-width: 768px) {
   .carousel-track img {
-    height: 200px;
+    height: 180px;
   }
 }
+
 
 
 

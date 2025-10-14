@@ -131,13 +131,12 @@
     
       const track = document.getElementById("carousel-track");
     
-      // Randomize image order on refresh
-      const shuffled = images.sort(() => Math.random() - 0.5);
+      // Randomize order once per refresh
+      const shuffled = [...images].sort(() => Math.random() - 0.5);
     
-      // Duplicate the list for seamless looping
+      // Duplicate images 2x for seamless loop
       const doubled = [...shuffled, ...shuffled];
     
-      // Create <img> elements
       doubled.forEach(src => {
         const img = document.createElement("img");
         img.src = src;
@@ -145,6 +144,7 @@
         track.appendChild(img);
       });
     </script>
+    
     
     
 
