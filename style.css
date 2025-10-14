@@ -460,13 +460,14 @@ body, h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .carousel-track img {
-  height: 180px; /* reduced height for proportion */
+  height: 100px;
   width: auto;
   flex-shrink: 0;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
   transition: transform 0.3s ease;
 }
+
 
 .carousel-track img:hover {
   transform: scale(1.05);
