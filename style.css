@@ -1,4 +1,10 @@
-* {
+*
+  body, h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.3px;
+  }
+
+  {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -359,60 +365,79 @@
     height: 600px; /* bigger preview */
     border: none;
   }
-  
-  
- 
-  
-  /* General project spacing */
-.styling-project {
-  margin-bottom: 4rem;
-  text-align: center;
+
+/* ======= STYLING PORTFOLIO ======= */
+
+.styling-portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  margin: 100px auto;
+  max-width: 1400px;
+  padding: 0 40px;
+}
+
+.portfolio-project {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-header {
+  text-align: left;
+  margin-bottom: 10px;
 }
 
 .styling-title {
-  font-size: 2rem;
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 0.2rem;
+  font-size: 1.8rem;
+  margin-bottom: 6px;
 }
 
 .styling-desc {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 1.5rem;
+  color: #4b4b4b;
+  font-weight: 400;
+  font-size: 1.05rem;
+  line-height: 1.5;
 }
 
-/* Collage layout */
-.styling-collage {
-  columns: 3; /* number of columns (auto adjusts image widths) */
-  column-gap: 15px;
-  padding: 0 2rem;
+/* --- horizontal layout --- */
+.styling-gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 14px;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 12px;
 }
 
-.styling-collage img {
-  width: 100%;
+.styling-gallery img {
+  scroll-snap-align: start;
   height: auto;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  object-fit: cover;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  max-height: 550px;
+  width: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-.styling-collage img:hover {
+.styling-gallery img:hover {
   transform: scale(1.03);
-  filter: brightness(1.05);
 }
 
-/* Responsive tweaks */
-@media (max-width: 900px) {
-  .styling-collage {
-    columns: 2;
+/* scrollbar style */
+.styling-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+.styling-gallery::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .styling-gallery img {
+    max-height: 350px;
   }
 }
 
-@media (max-width: 600px) {
-  .styling-collage {
-    columns: 1;
-  }
-}
 
