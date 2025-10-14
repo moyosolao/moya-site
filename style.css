@@ -447,14 +447,19 @@ body, h1, h2, h3, h4, h5, h6, p, a {
   overflow: hidden;
   position: relative;
   margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; /* optional, so borders look intentional */
 }
 
 .carousel img {
   width: 100%;
   height: auto;
-  display: block;
-  object-fit: cover;
+  max-height: 500px;
+  object-fit: contain; /* shows full image */
   transition: opacity 0.5s ease-in-out;
 }
+
 
 
