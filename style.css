@@ -446,21 +446,24 @@ body, h1, h2, h3, h4, h5, h6, p, a {
   width: 100%;
   overflow: hidden;
   margin-bottom: 40px;
-  background: none; /* removes black background */
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel-track {
   display: flex;
   align-items: center;
-  gap: 20px;
-  animation: scroll 40s linear infinite;
+  gap: 15px;
+  animation: scroll 45s linear infinite;
 }
 
 .carousel-track img {
-  height: 250px; /* adjust to your liking */
+  height: 180px; /* reduced height for proportion */
   width: auto;
   flex-shrink: 0;
-  object-fit: cover; /* keeps a clean look */
+  object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
@@ -479,12 +482,13 @@ body, h1, h2, h3, h4, h5, h6, p, a {
   }
 }
 
-/* Responsive tweak */
+/* Mobile adjustments */
 @media (max-width: 768px) {
   .carousel-track img {
-    height: 180px;
+    height: 120px;
   }
 }
+
 
 
 
