@@ -456,7 +456,7 @@ body, h1, h2, h3, h4, h5, h6, p, a {
   align-items: center;
   gap: 0; /* removes spacing between images */
   width: max-content;
-  animation: scroll-carousel 80s linear infinite;
+  animation: scroll-carousel 60s linear infinite;
 }
 
 .carousel-track img {
