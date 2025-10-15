@@ -29,12 +29,18 @@
       <h1 class="section-title">Fashion Styling Portfolio</h1>
       <p class="section-subtitle">#iloveclothes , all styled by me</p>
     </section>
-    
-    <section class="carousel-multi">
-      <div class="carousel-track" id="carousel-track"></div>
-    </section>
-      
 
+    <div class="styling-carousel">
+      <div class="carousel-track">
+        <img src="images/sister1.jpg" alt="">
+        <img src="images/tennis1.jpg" alt="">
+        <img src="images/bsuweb1.JPG" alt="">
+        <img src="images/twigen1.jpg" alt="">
+        <img src="images/twiannek1.JPG" alt="">
+      </div>
+    </div>
+    
+    
 
     <div class="styling-portfolio">
       
@@ -115,35 +121,7 @@
     
     </div>
 
-    <script>
-      const images = [
-        "images/sister1.jpg", "images/sister2.jpg", "images/sister3.JPG",
-        "images/sister4.JPG", "images/sister5.JPG",
-        "images/tennis1.jpg", "images/tennis2.jpg", "images/tennis3.jpg",
-        "images/tennis4.jpg", "images/tennis5.jpg",
-        "images/bsuweb1.JPG", "images/bsuweb2.jpg", "images/bsuweb3.jpg",
-        "images/bsuweb4.jpg", "images/bsuweb5.jpg",
-        "images/twigen1.jpg", "images/twigen2.jpg", "images/twigen3.JPG",
-        "images/twigen4.JPG", "images/twigen5.JPG",
-        "images/twiannek1.JPG", "images/twiannek2.JPG", "images/twiannek3.JPG",
-        "images/twiannek4.JPG"
-      ];
     
-      const track = document.getElementById("carousel-track");
-    
-      // Randomize order once per refresh
-      const shuffled = [...images].sort(() => Math.random() - 0.5);
-    
-      // Duplicate images 2x for seamless loop
-      const doubled = [...shuffled, ...shuffled];
-    
-      doubled.forEach(src => {
-        const img = document.createElement("img");
-        img.src = src;
-        img.alt = "Fashion Styling Work";
-        track.appendChild(img);
-      });
-    </script>
     
     
     
