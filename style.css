@@ -441,48 +441,71 @@ body, h1, h2, h3, h4, h5, h6, p, a {
   }
 }
 
-/* ======= STYLING PAGE CAROUSEL ======= */
+/* ======= STYLING PAGE CAROUSEL (INFINITE LOOP) ======= */
 
 .styling-carousel {
-  position: relative;
   width: 100%;
   max-width: 1400px;
   margin: 40px auto 80px auto;
   overflow: hidden;
+  position: relative;
   border-radius: 16px;
 }
 
 .carousel-track {
   display: flex;
-  width: calc(100% * 5); /* 5 images */
-  animation: slide 30s infinite linear;
+  gap: 12px;
+  width: max-content;
+  animation: scroll-carousel 60s linear infinite;
 }
 
 .carousel-track img {
-  width: 100%;
-  height: 380px;
+  width: 250px;
+  height: 170px;
   object-fit: cover;
+  border-radius: 10px;
   flex-shrink: 0;
+  opacity: 0.9;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Make sure it’s not too big on small screens */
-@media (max-width: 768px) {
-  .carousel-track img {
-    height: 240px;
+.carousel-track img:hover {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+/* Create automatic looping by cloning content */
+.carousel-track::after {
+  content: "";
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  background: inherit;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 100%;
+}
+
+/* Infinite scroll animation */
+@keyframes scroll-carousel {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
-/* Smooth scrolling animation */
-@keyframes slide {
-  0% { transform: translateX(0); }
-  20% { transform: translateX(0); }
-  25% { transform: translateX(-100%); }
-  45% { transform: translateX(-100%); }
-  50% { transform: translateX(-200%); }
-  70% { transform: translateX(-200%); }
-  75% { transform: translateX(-300%); }
-  95% { transform: translateX(-300%); }
-  100% { transform: translateX(-400%); }
+/* Responsive design */
+@media (max-width: 768px) {
+  .carousel-track img {
+    width: 160px;
+    height: 110px;
+  }
+  .styling-carousel {
+    margin: 20px auto 60px auto;
+  }
 }
 
 
