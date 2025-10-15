@@ -441,54 +441,39 @@ body, h1, h2, h3, h4, h5, h6, p, a {
   }
 }
 
-/* ======= STYLING PAGE CAROUSEL (TRUE DIMENSIONS + INFINITE LOOP) ======= */
+/* ======= STYLING PAGE CAROUSEL (SEAMLESS, TRUE DIMENSIONS) ======= */
 
 .styling-carousel {
   width: 100%;
-  max-width: 1400px;
+  max-width: 100vw;
   margin: 60px auto 100px auto;
   overflow: hidden;
   position: relative;
-  border-radius: 16px;
 }
 
 .carousel-track {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 0; /* removes spacing between images */
   width: max-content;
-  animation: scroll-carousel 70s linear infinite;
+  animation: scroll-carousel 80s linear infinite;
 }
 
 .carousel-track img {
-  height: 300px; /* larger size */
-  width: auto; /* keeps natural proportion */
-  border-radius: 14px;
+  height: 380px; /* increase this to make it bigger (e.g., 420px, 480px) */
+  width: auto; /* keeps true proportions */
+  border-radius: 0; /* no rounded edges */
   flex-shrink: 0;
-  object-fit: contain; /* prevents cropping */
-  background-color: #fafafa; /* adds padding effect for mixed ratios */
-  padding: 4px;
-  transition: transform 0.4s ease, opacity 0.3s ease;
+  object-fit: contain; /* preserves dimensions, no cropping */
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .carousel-track img:hover {
-  transform: scale(1.05);
-  opacity: 1;
+  transform: scale(1.04);
+  opacity: 0.95;
 }
 
-/* infinite scroll effect */
-.carousel-track::after {
-  content: "";
-  display: flex;
-  gap: 20px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  height: 100%;
-}
-
-/* continuous animation */
+/* infinite scroll */
 @keyframes scroll-carousel {
   from {
     transform: translateX(0);
@@ -498,12 +483,13 @@ body, h1, h2, h3, h4, h5, h6, p, a {
   }
 }
 
-/* Responsive sizing */
+/* Responsive */
 @media (max-width: 768px) {
   .carousel-track img {
-    height: 200px;
+    height: 240px; /* mobile version */
   }
 }
+
 
 
 
