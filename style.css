@@ -460,7 +460,7 @@ body, h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .carousel-track img {
-  height: 380px; /* increase this to make it bigger (e.g., 420px, 480px) */
+  height: 420px; /* increase this to make it bigger (e.g., 420px, 480px) */
   width: auto; /* keeps true proportions */
   border-radius: 0; /* no rounded edges */
   flex-shrink: 0;
